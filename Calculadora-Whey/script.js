@@ -33,10 +33,11 @@ document.getElementById("calculator-form").addEventListener("submit", function(e
     const fat = parseFloat(document.getElementById("fat").value);
     
     // Perform calculations
+    const percentOf100g = (100 / weight) * 100;
     const proteinPercentage = ((protein / servingSize) * 100).toFixed(2);
     const pricePerServing = (price / servingSize).toFixed(2);
     const servingsPerContainer = Math.floor(weight / servingSize);
-    const pricePer100gProtein = ((price / protein) * 100).toFixed(2);
+    const pricePer100gProtein = ((percentOf100g * 100 ) / proteinPercentage).toFixed(2);
     const fatPer100gProtein = ((fat / protein) * 100).toFixed(2);
     const carbsPer100gProtein = ((carbs / protein) * 100).toFixed(2);
 
