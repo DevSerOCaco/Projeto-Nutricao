@@ -1,25 +1,4 @@
-document.getElementById("calculator-form").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent form submission
-    
-    // Get input values
-    const brand = document.getElementById("brand").value;
-    const price = parseFloat(document.getElementById("price").value);
-    const weight = parseFloat(document.getElementById("weight"));
-  })
-
-  document.getElementById("calculator-form").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent form submission
-    
-    // Get input values
-    const brand = document.getElementById("brand").value;
-    const price = parseFloat(document.getElementById("price").value);
-    const weight = parseFloat(document.getElementById("weight").value);
-    const servingSize = parseFloat(document.getElementById("serving-size").value);
-    const kcal = parseFloat(document.getElementById("kcal").value);
-    const protein = parseFloat(document.getElementById("protein"))
-  })
-
-  document.getElementById("calculator-form").addEventListener("submit", function(event) {
+ document.getElementById("calculator-form").addEventListener("submit", function(event) {
     event.preventDefault(); // Prevent form submission
     
     // Get input values
@@ -55,3 +34,5 @@ document.getElementById("calculator-form").addEventListener("submit", function(e
 
     document.getElementById("result").innerHTML = resultHTML;
   });
+
+  
