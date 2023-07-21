@@ -1,9 +1,26 @@
-body {
-    background-color: rgb(152, 155, 158);
+* {
+    color: aliceblue;
 }
 
-div {
+body {
+    background-color: rgba(245, 245, 245, 0.64);
+}
+
+
+div, form {
+   
     margin: 3px;
+}
+
+.container>div>div, form {
+    background: rgb(36, 31, 33);
+    background: radial-gradient(circle, rgb(47, 53, 81) 0%, rgb(19, 34, 52) 100%);
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+.container{
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    background-color: rgb(117, 117, 117);
 }
 
 button {

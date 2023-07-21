@@ -15,11 +15,11 @@
 
 
 
-	<div class="container bg-dark rounded">
+	<div id="container" class="container rounded">
 
 		<div class="row justify-content-center ">
 
-			<div class="col row justify-content-md-center align-items-center border bg-light m-1 rounded">
+			<div class="col row justify-content-md-center align-items-center border m-1 rounded">
 
 				<h1 class="">Calculadora de Custo x Benefício - Whey Protein</h1>
 
@@ -28,7 +28,7 @@
 
 		<div class="row justify-content-center">
 
-			<form id="calculator-form" class="form-group col-lg p-3 border bg-light m-1 rounded">
+			<form id="calculator-form" class="form-group col-lg p-3 border  m-1 rounded">
 
 				<label for="brand">Marca:</label>
 				<input type="text" class="form-control " id="brand" required>
@@ -43,37 +43,38 @@
 				<input type="number" min="0" class="form-control" id="serving-size" required>
 
 				<label for="kcal">kcal / porção:</label>
-				<input type="number" min="0" class="form-control" id="kcal" required>
+				<input type="number" min="0" step=0.01 class="form-control" id="kcal" required>
 
 				<label for="protein">Proteína / porção (g):</label>
-				<input type="number" min="0" class="form-control" id="protein" required>
+				<input type="number" min="0" step=0.01 class="form-control" id="protein" required>
 
 				<label for="carbs">Carboidrato / porção (g):</label>
-				<input type="number" min="0" class="form-control" id="carbs" required>
+				<input type="number" min="0" step=0.01 class="form-control" id="carbs" required>
 
 				<label for="fat">Gordura / porção (g):</label>
-				<input type="number" min="0" class="form-control" id="fat" required>
+				<input type="number" min="0" step=0.01 class="form-control" id="fat" required>
 
 				<button type="submit" class="btn btn-primary" name="calculate" value="1">Calcular 1</button>
       			<button type="submit" class="btn btn-primary" name="calculate" value="2">Calcular 2</button>
 			</form>
 
-			<div class="col-lg p-3 border bg-light m-1 rounded">
+			<div class="col-lg p-3 border m-1 rounded">
 
 				<div class="d-flex align-items-center justify-content-center h-100">
 
-					<div id="result" class="mt-4">sada</div>
-					<div id="result2" class="mt-4">sada</div>
+					<div id="result" class="mt-4"></div>
+					<div id="result2" class="mt-4"></div>
 
 				</div>
 
 			</div>
 
-			<div class="col-lg p-3 border bg-light m-1 rounded">
+			<div class="col-lg p-3 border m-1 rounded">
 
 				<div class="d-flex align-items-center h-100 justify-content-center">
 					<div class="col">
-						<h2 style="text-align: center">Exemplo de tabela nutricional</h2>
+						<h2 style="text-align: center">Preencha os dados conforme a tabela nutricional</h2>
+						<p>Exemplo:</p>
 						<img src="imagens/exemploTabela.png" alt="Exemplo de tabela">
 					</div>
 				</div>
