@@ -47,14 +47,8 @@ document.getElementById("calculator-form").addEventListener("submit", function(e
 
 // Função para exibir os resultados
 function displayResults(resultId, result) {
-  const resultHTML = `
-    <h3>${result.brand}</h3>
-    <p><strong>Porcentagem de Proteína:</strong> ${result.proteinPercentage}%</p>
-    <p><strong>Preço por Dose Recomendada:</strong> R$ ${result.pricePerServing}</p>
-    <p><strong>Doses Recomendadas por Embalagem:</strong> ${result.servingsPerContainer}</p>
-    <p><strong>Preço por 100g de Proteína:</strong> R$ ${result.pricePer100gProtein}</p>
-    <p><strong>Gordura por 100g de Proteína:</strong> ${result.fatPer100gProtein}g</p>
-    <p><strong>Carboidrato por 100g de Proteína:</strong> ${result.carbsPer100gProtein}g</p>
-  `;
-  document.getElementById(resultId).innerHTML = resultHTML;
+  document.getElementById(`${resultId}-brand`).textContent = result.brand;
+  document.getElementById(`${resultId}-proteinPercentage`).textContent = `${result.proteinPercentage}%`;
+  document.getElementById(`${resultId}-pricePerServing`).textContent = `R$ ${result.pricePerServing}`;
+  // Adicione mais atribuições conforme necessário para outras células
 }

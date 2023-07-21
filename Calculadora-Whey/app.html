@@ -61,10 +61,33 @@
 			<div class="col-lg p-3 border m-1 rounded">
 
 				<div class="d-flex align-items-center justify-content-center h-100">
-
-					<div id="result" class="mt-4"></div>
-					<div id="result2" class="mt-4"></div>
-
+					<table class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Informação</th>
+                                <th>Resultado 1</th>
+                                <th>Resultado 2</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Marca:</strong></td>
+                                <td id="result-brand"></td>
+                                <td id="result2-brand"></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Porcentagem de Proteína:</strong></td>
+                                <td id="result-proteinPercentage"></td>
+                                <td id="result2-proteinPercentage"></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Preço por Dose Recomendada:</strong></td>
+                                <td id="result-pricePerServing"></td>
+                                <td id="result2-pricePerServing"></td>
+                            </tr>
+                            <!-- Adicione mais linhas aqui conforme necessário -->
+                        </tbody>
+                    </table>
 				</div>
 
 			</div>
@@ -98,3 +121,15 @@
 </body>
 
 </html>
+
+<div id="enum" class="mt-4S"> 
+	<p><strong>Marca:</strong></p>
+	<p><strong>Porcentagem de Proteína:</strong></p>
+	<p><strong>Preço por Dose Recomendada:</strong></p>
+	<p><strong>Doses Recomendadas por Embalagem:</strong></p>
+	<p><strong>Preço por 100g de Proteína:</strong></p>
+	<p><strong>Gordura por 100g de Proteína:</strong></p>
+	<p><strong>Carboidrato por 100g de Proteína:</strong></p>
+</div>
+<div id="result" class="mt-4"></div>
+<div id="result2" class="mt-4"></div>
