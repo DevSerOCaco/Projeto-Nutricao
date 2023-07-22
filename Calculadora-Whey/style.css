@@ -3,7 +3,9 @@
 }
 
 body {
-    background-color: rgba(245, 245, 245, 0.64);
+    background-color: rgba(77, 96, 156, 0.548);
+    margin: 0;
+    padding: 0
 }
 
 
@@ -48,8 +50,47 @@ h3, td {
     background-color: rgb(29, 73, 73);
 }
 
-
-
 .product, .response {
     background-color: rgba(0, 0, 0, 0.425);
 }
+
+header{
+    background: linear-gradient(to top, transparent, rgb(33, 58, 88));
+}
+  
+  .footer {
+    background: linear-gradient(to bottom, transparent, rgb(19, 34, 52));
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-name {
+    color: #ebe3e3;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .social-icon {
+    font-size: 24px;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    color: #00bfff;
+  }
