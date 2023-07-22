@@ -50,6 +50,7 @@ document.getElementById("calculator-form").addEventListener("submit", function(e
     displayResults("result", result);
   } else if (clickedButtonValue === "2") {
     displayResults("result2", result);
+    compareResults();
   }
 });
 
@@ -63,4 +64,89 @@ function displayResults(resultId, result) {
   document.getElementById(`${resultId}-fatPer100gProtein`).textContent = `${result.fatPer100gProtein}`;
   document.getElementById(`${resultId}-carbsPer100gProtein`).textContent = `${result.carbsPer100gProtein}`;
   // Adicione mais atribuições conforme necessário para outras células
+}
+
+function extractNumericValue(text) {
+  return parseFloat(text.replace(/[^\d.-]/g, ''));
+}
+
+function compareResults(){
+  const proteinPorcentage1 = parseInt(document.getElementById("result-proteinPercentage").textContent);
+  const proteinPorcentage2 = parseInt(document.getElementById("result2-proteinPercentage").textContent);
+  if (proteinPorcentage1 > proteinPorcentage2) {
+    document.getElementById("result-proteinPercentage").style.backgroundColor= "green";
+    document.getElementById("result2-proteinPercentage").style.backgroundColor= "red";
+  } else if(proteinPorcentage1 < proteinPorcentage2) {
+    document.getElementById("result-proteinPercentage").style.backgroundColor= "red";
+    document.getElementById("result2-proteinPercentage").style.backgroundColor= "green";
+  } else {
+    document.getElementById("result-proteinPercentage").style.backgroundColor= "gray";
+    document.getElementById("result2-proteinPercentage").style.backgroundColor= "gray";
+  }
+
+  const pricePerServing1 = extractNumericValue(document.getElementById("result-pricePerServing").textContent);
+  const pricePerServing2 = extractNumericValue(document.getElementById("result2-pricePerServing").textContent);
+  if (pricePerServing1 < pricePerServing2) {
+    document.getElementById("result-pricePerServing").style.backgroundColor= "green";
+    document.getElementById("result2-pricePerServing").style.backgroundColor= "red";
+  } else if(pricePerServing1 > pricePerServing2) {
+    document.getElementById("result-pricePerServing").style.backgroundColor= "red";
+    document.getElementById("result2-pricePerServing").style.backgroundColor= "green";
+  } else {
+    document.getElementById("result-pricePerServing").style.backgroundColor= "gray";
+    document.getElementById("result2-pricePerServing").style.backgroundColor= "gray";
+  }
+
+  
+  const servingsPerContainer1 = parseInt(document.getElementById("result-servingsPerContainer").textContent);
+  const servingsPerContainer2 = parseInt(document.getElementById("result2-servingsPerContainer").textContent);
+  if (servingsPerContainer1 > servingsPerContainer2) {
+    document.getElementById("result-servingsPerContainer").style.backgroundColor= "green";
+    document.getElementById("result2-servingsPerContainer").style.backgroundColor= "red";
+  } else if(servingsPerContainer1 < servingsPerContainer2) {
+    document.getElementById("result-servingsPerContainer").style.backgroundColor= "red";
+    document.getElementById("result2-servingsPerContainer").style.backgroundColor= "green";
+  } else {
+    document.getElementById("result-servingsPerContainer").style.backgroundColor= "gray";
+    document.getElementById("result2-servingsPerContainer").style.backgroundColor= "gray";
+  }
+
+  const pricePer100gProtein1 = parseInt(document.getElementById("result-pricePer100gProtein").textContent);
+  const pricePer100gProtein2 = parseInt(document.getElementById("result2-pricePer100gProtein").textContent);
+  if (pricePer100gProtein1 > pricePer100gProtein2) {
+    document.getElementById("result-pricePer100gProtein").style.backgroundColor= "green";
+    document.getElementById("result2-pricePer100gProtein").style.backgroundColor= "red";
+  } else if(pricePer100gProtein1 < pricePer100gProtein2) {
+    document.getElementById("result-pricePer100gProtein").style.backgroundColor= "red";
+    document.getElementById("result2-pricePer100gProtein").style.backgroundColor= "green";
+  } else {
+    document.getElementById("result-pricePer100gProtein").style.backgroundColor= "gray";
+    document.getElementById("result2-pricePer100gProtein").style.backgroundColor= "gray";
+  }
+
+  const fatPer100gProtein1 = parseInt(document.getElementById("result-fatPer100gProtein").textContent);
+  const fatPer100gProtein2 = parseInt(document.getElementById("result2-fatPer100gProtein").textContent);
+  if (fatPer100gProtein1 < fatPer100gProtein2) {
+    document.getElementById("result-fatPer100gProtein").style.backgroundColor= "green";
+    document.getElementById("result2-fatPer100gProtein").style.backgroundColor= "red";
+  } else if(fatPer100gProtein1 > fatPer100gProtein2) {
+    document.getElementById("result-fatPer100gProtein").style.backgroundColor= "red";
+    document.getElementById("result2-fatPer100gProtein").style.backgroundColor= "green";
+  } else {
+    document.getElementById("result-fatPer100gProtein").style.backgroundColor= "gray";
+    document.getElementById("result2-fatPer100gProtein").style.backgroundColor= "gray";
+  }
+
+  const carbsPer100gProtein1 = parseInt(document.getElementById("result-carbsPer100gProtein").textContent);
+  const carbsPer100gProtein2 = parseInt(document.getElementById("result2-carbsPer100gProtein").textContent);
+  if (carbsPer100gProtein1 < carbsPer100gProtein2) {
+    document.getElementById("result-carbsPer100gProtein").style.backgroundColor= "green";
+    document.getElementById("result2-carbsPer100gProtein").style.backgroundColor= "red";
+  } else if(carbsPer100gProtein1 > carbsPer100gProtein2) {
+    document.getElementById("result-carbsPer100gProtein").style.backgroundColor= "red";
+    document.getElementById("result2-carbsPer100gProtein").style.backgroundColor= "green";
+  } else {
+    document.getElementById("result-carbsPer100gProtein").style.backgroundColor= "gray";
+    document.getElementById("result2-carbsPer100gProtein").style.backgroundColor= "gray";
+  }
 }

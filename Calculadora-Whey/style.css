@@ -40,6 +40,16 @@ p {
     font-size: small;
 }
 
-h3 {
-    font-size: medium;
+h3, td {
+    font-size: small;
+}
+
+.col1 {
+    background-color: rgb(29, 73, 73);
+}
+
+
+
+.product, .response {
+    background-color: rgba(0, 0, 0, 0.425);
 }
