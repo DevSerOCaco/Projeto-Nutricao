@@ -50,5 +50,9 @@ function displayResults(resultId, result) {
   document.getElementById(`${resultId}-brand`).textContent = result.brand;
   document.getElementById(`${resultId}-proteinPercentage`).textContent = `${result.proteinPercentage}%`;
   document.getElementById(`${resultId}-pricePerServing`).textContent = `R$ ${result.pricePerServing}`;
+  document.getElementById(`${resultId}-servingsPerContainer`).textContent = `${result.servingsPerContainer}`;
+  document.getElementById(`${resultId}-pricePer100gProtein`).textContent = `${result.pricePer100gProtein}`;
+  document.getElementById(`${resultId}-fatPer100gProtein`).textContent = `${result.fatPer100gProtein}`;
+  document.getElementById(`${resultId}-carbsPer100gProtein`).textContent = `${result.carbsPer100gProtein}`;
   // Adicione mais atribuições conforme necessário para outras células
 }
