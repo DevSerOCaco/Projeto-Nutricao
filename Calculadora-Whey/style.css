@@ -39,11 +39,15 @@ h1 {
 }
 
 p {
-    font-size: small;
+    font-size: xx-small;
+}
+
+h2 {
+  font-size: small;
 }
 
 h3, td {
-    font-size: small;
+    font-size: smaller;
 }
 
 .col1 {
@@ -58,6 +62,8 @@ header{
     background: linear-gradient(to top, transparent, rgb(33, 58, 88));
 }
   
+
+
   .footer {
     background: linear-gradient(to bottom, transparent, rgb(19, 34, 52));
     color: #fff;

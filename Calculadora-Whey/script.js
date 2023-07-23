@@ -10,8 +10,8 @@ function precoPor100gProteina(pesoTotal, precoTotal, porcentagemProteina) {
 function calculateResults(brand, price, weight, servingSize, protein, carbs, fat) {
   const percentOf100g = (100 / weight) * 100;
   const proteinPercentage = ((protein / servingSize) * 100).toFixed(2);
-  const pricePerServing = (price / servingSize).toFixed(2);
   const servingsPerContainer = Math.floor(weight / servingSize);
+  const pricePerServing = (price / servingsPerContainer).toFixed(2);
   const pricePer100gProtein = precoPor100gProteina(weight, price, proteinPercentage);
   const fatPer100gProtein = ((fat / protein) * 100).toFixed(2);
   const carbsPer100gProtein = ((carbs / protein) * 100).toFixed(2);
